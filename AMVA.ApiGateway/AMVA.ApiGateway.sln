@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGatewayAMVA", "ApiGatewayAMVA\ApiGatewayAMVA.csproj", "{BD4D8DCB-76C3-4042-9C25-BD3B9D75979B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMVA.Authentication", "AMVA.Authentication\AMVA.Authentication.csproj", "{E4787573-4EC3-46EF-9B9B-589C1570EACB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BD4D8DCB-76C3-4042-9C25-BD3B9D75979B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD4D8DCB-76C3-4042-9C25-BD3B9D75979B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD4D8DCB-76C3-4042-9C25-BD3B9D75979B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4787573-4EC3-46EF-9B9B-589C1570EACB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4787573-4EC3-46EF-9B9B-589C1570EACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4787573-4EC3-46EF-9B9B-589C1570EACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4787573-4EC3-46EF-9B9B-589C1570EACB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,4 @@
-namespace ApiGatewayAMVA
+namespace AMVA.Authentication
 {
     public class WeatherForecast
     {

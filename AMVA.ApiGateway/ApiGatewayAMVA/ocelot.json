@@ -1,16 +1,36 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/product",
+      "DownstreamPathTemplate": "/auth/token?username={username}&userType={userType}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44337
+          "Port": 7201
         }
       ],
-      "UpstreamPathTemplate": "/gateway/product",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      "UpstreamPathTemplate": "/api/token?username={username}&userType={userType}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "UserType": "authorized"
+      },
+      "DownstreamPathTemplate": "/api/ExpedienteAmbiental/ObtenerExpedientesAmbientales",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7012
+        }
+      ],
+      "UpstreamPathTemplate": "/ObtenerExpedientesAmbientales",
+      "UpstreamHttpMethod": [ "Get" ]
+      
     }
   ],
   "GlobalConfiguration": {
