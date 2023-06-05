@@ -1,7 +1,9 @@
 {
   "Routes": [
+    //Authentication Web API
     {
-      "DownstreamPathTemplate": "/auth/token?username={username}&userType={userType}",
+      "DownstreamPathTemplate": "/api/Account",
+      "UpstreamHttpMethod": [ "Post" ],
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -9,18 +11,15 @@
           "Port": 7201
         }
       ],
-      "UpstreamPathTemplate": "/api/token?username={username}&userType={userType}",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamPathTemplate": "/api/Account"
+
     },
     {
+      "DownstreamPathTemplate": "/api/ExpedienteAmbiental/ObtenerExpedientesAmbientales",
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
       },
-      "RouteClaimsRequirement": {
-        "UserType": "authorized"
-      },
-      "DownstreamPathTemplate": "/api/ExpedienteAmbiental/ObtenerExpedientesAmbientales",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {

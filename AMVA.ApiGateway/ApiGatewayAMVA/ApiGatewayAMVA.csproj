@@ -24,4 +24,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AMVA.JwtAuthenticationManager\AMVA.JwtAuthenticationManager.csproj" />
+  </ItemGroup>
+
 </Project>
