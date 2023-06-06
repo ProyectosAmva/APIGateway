@@ -20,6 +20,9 @@
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
       },
+      "RouteClaimsRequirement": {
+        "Role" :  "Administrator"
+      },
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {

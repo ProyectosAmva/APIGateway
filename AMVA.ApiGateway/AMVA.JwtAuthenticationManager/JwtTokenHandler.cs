@@ -35,7 +35,7 @@ namespace AMVA.JwtAuthenticationManager
             var claimsIdentity = new ClaimsIdentity(new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Name, authenticationRequest.UserName),
-                new Claim(ClaimTypes.Role,userAcccount.Role),
+                new Claim("Role",userAcccount.Role),
             });
 
             var signingCredentials = new SigningCredentials(
