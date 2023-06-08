@@ -16,8 +16,7 @@ namespace AMVA.JwtAuthenticationManager
         {
             userAccountList = new List<UserAccount>
             {
-                new UserAccount{UserName = "expedientesAmbientalesadmin", Password = "amvaAdminExpedienteAmbiental#3456", Role = "Administrator"},
-                new UserAccount{UserName = "expedientesAmbientalesUser", Password = "amvaExpedienteAmbiental%743l", Role = "User"},
+               new UserAccount{UserName = "expedientesAmbientalesUser", Password = "amvaExpedienteAmbiental%743l", Role = "UserExpA"},
             };
 
         }

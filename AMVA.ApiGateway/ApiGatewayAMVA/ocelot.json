@@ -21,7 +21,7 @@
         "AllowedScopes": []
       },
       "RouteClaimsRequirement": {
-        "Role" :  "Administrator"
+        "Role": "UserExpA"
       },
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
