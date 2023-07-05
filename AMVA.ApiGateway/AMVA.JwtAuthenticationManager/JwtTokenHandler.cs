@@ -17,6 +17,7 @@ namespace AMVA.JwtAuthenticationManager
             userAccountList = new List<UserAccount>
             {
                new UserAccount{UserName = "expedientesAmbientalesUser", Password = "amvaExpedienteAmbiental%743l", Role = "UserExpA"},
+                new UserAccount{UserName = "VITALUser", Password = "amvaVITAL%743l", Role = "UserVITAL"},
             };
 
         }
@@ -26,7 +27,7 @@ namespace AMVA.JwtAuthenticationManager
             if (string.IsNullOrWhiteSpace(authenticationRequest.UserName) || string.IsNullOrWhiteSpace(authenticationRequest.Password)) return null;
 
             var userAcccount = userAccountList.Where(x => x.UserName == authenticationRequest.UserName && x.Password == authenticationRequest.Password).FirstOrDefault();
-            
+
             if (userAcccount == null) return null;
 
             var tokenExpiryTimeStamp = DateTime.UtcNow.AddMinutes(JWT_TOKEN_VALIDATE_MINS);
