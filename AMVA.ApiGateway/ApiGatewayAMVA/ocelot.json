@@ -21,7 +21,7 @@
         "AllowedScopes": []
       },
       "RouteClaimsRequirement": {
-        "Role": "UserExpA"
+        "Role": "UserSIM"
       },
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -32,8 +32,27 @@
       ],
       "UpstreamPathTemplate": "/ObtenerExpedientesAmbientales",
       "UpstreamHttpMethod": [ "Get" ]
-      
+    },
+    {
+      "DownstreamPathTemplate": "/api/SolicitudVITAL/ObtenerSolicitudesVITAL",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "UserSIM"
+      },
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7109
+        }
+      ],
+      "UpstreamPathTemplate": "/ObtenerSolicitudesVITAL",
+      "UpstreamHttpMethod": [ "Get" ]
     }
+
   ],
   "GlobalConfiguration": {
     "BaseUrl": "https://localhost:5000"
