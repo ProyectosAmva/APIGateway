@@ -1,6 +1,5 @@
 {
   "Routes": [
-    //Authentication Web API
     {
       "DownstreamPathTemplate": "/api/Account",
       "UpstreamHttpMethod": [ "Post" ],
@@ -11,6 +10,11 @@
           "Port": 7201
         }
       ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": true,
+        "UseCookieContainer": true,
+        "UseTracing": true
+      },
       "UpstreamPathTemplate": "/api/Account"
 
     },
@@ -24,6 +28,12 @@
         "Role": "UserSIM"
       },
       "DownstreamScheme": "https",
+      "RouteIsCaseSensitive": false,
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": true,
+        "UseCookieContainer": true,
+        "UseTracing": true
+      },
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
@@ -34,23 +44,54 @@
       "UpstreamHttpMethod": [ "Get" ]
     },
     {
-      "DownstreamPathTemplate": "/api/SolicitudVITAL/ObtenerSolicitudesVITAL",
+      "DownstreamPathTemplate": "/api/{Ctr}/{Accion}",
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
+      },
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": true,
+        "UseCookieContainer": true,
+        "UseTracing": true
       },
       "RouteClaimsRequirement": {
         "Role": "UserSIM"
       },
       "DownstreamScheme": "https",
+      "RouteIsCaseSensitive": false,
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
           "Port": 7109
         }
       ],
-      "UpstreamPathTemplate": "/ObtenerSolicitudesVITAL",
+      "UpstreamPathTemplate": "/Vital/{Ctr}/{Accion}",
       "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/{Ctr}/{Accion}?{Param1}={Value1}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": true,
+        "UseCookieContainer": true,
+        "UseTracing": true
+      },
+      "RouteClaimsRequirement": {
+        "Role": "UserSIM"
+      },
+      "DownstreamScheme": "https",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7109
+        }
+      ],
+      "UpstreamPathTemplate": "/Vital/{Ctr}/{Accion}/{Param1}/{Value1}",
+      "UpstreamHttpMethod": []
     }
 
   ],
