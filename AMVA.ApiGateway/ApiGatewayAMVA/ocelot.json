@@ -66,7 +66,7 @@
         }
       ],
       "UpstreamPathTemplate": "/Vital/{Ctr}/{Accion}",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": []
     },
     {
       "DownstreamPathTemplate": "/api/{Ctr}/{Accion}?{Param1}={Value1}",
